@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:8080/api";
+const API = import.meta.env.VITE_API_BASE_URL || "https://smartqueue-deploy.onrender.com/api";
 
 function statusLabel(status) {
   return ({
